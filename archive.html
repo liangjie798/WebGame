@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>鱼化湖回声：档案</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="site-body">
+    <div class="page-bg page-bg-archive"></div>
+
+    <header class="site-header">
+      <div class="brand-block">
+        <a class="brand-mark" href="./index.html">鱼化湖回声</a>
+        <p class="brand-sub">档案页</p>
+      </div>
+      <nav class="site-nav">
+        <a class="nav-link" href="./index.html">游戏</a>
+        <a class="nav-link active" href="./archive.html">档案</a>
+        <a class="nav-link" href="./public.html">公开资料</a>
+      </nav>
+    </header>
+
+    <main class="shell">
+      <section class="page-hero panel">
+        <div>
+          <p class="eyebrow">Character Archive</p>
+          <h1>人物档案库</h1>
+          <p class="hero-text">
+            这页只做一件事：让你把人物设定拆开来看。筛选范围、逐个点开、在右侧持续核对人物关系和行为特征。
+          </p>
+        </div>
+        <div class="archive-hero-tools">
+          <div class="filter-group">
+            <button class="filter-btn active" data-filter="all">全部</button>
+            <button class="filter-btn" data-filter="sports">体育部成员</button>
+            <button class="filter-btn" data-filter="outsider">非体育部</button>
+            <button class="filter-btn" data-filter="focus">重点人物</button>
+          </div>
+          <label class="search-wrap" for="character-search">
+            <span class="input-label">搜索人物</span>
+            <input id="character-search" class="archive-search" type="text" placeholder="输入姓名、宿舍、关键词" />
+          </label>
+        </div>
+      </section>
+
+      <section class="archive-stats">
+        <article class="panel stat-card">
+          <span class="eyebrow">Total</span>
+          <strong id="stat-total">0</strong>
+          <p>全部角色</p>
+        </article>
+        <article class="panel stat-card">
+          <span class="eyebrow">Sports</span>
+          <strong id="stat-sports">0</strong>
+          <p>体育部成员</p>
+        </article>
+        <article class="panel stat-card">
+          <span class="eyebrow">Outsider</span>
+          <strong id="stat-outsider">0</strong>
+          <p>非体育部成员</p>
+        </article>
+        <article class="panel stat-card">
+          <span class="eyebrow">Focus</span>
+          <strong id="stat-focus">0</strong>
+          <p>重点调查人物</p>
+        </article>
+      </section>
+
+      <section class="archive-layout">
+        <section class="panel archive-grid-panel">
+          <div class="section-head compact">
+            <div>
+              <p class="eyebrow">Roster</p>
+              <h2>角色列表</h2>
+            </div>
+            <p id="archive-result" class="muted-copy">正在整理名单…</p>
+          </div>
+          <div id="character-grid" class="character-grid"></div>
+        </section>
+
+        <aside class="panel profile-panel">
+          <div class="section-head compact">
+            <div>
+              <p class="eyebrow">Profile</p>
+              <h2>档案详情</h2>
+            </div>
+          </div>
+          <div id="profile-sheet" class="profile-sheet"></div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/archive.js"></script>
+  </body>
+</html>
