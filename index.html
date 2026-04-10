@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>鱼化湖回声：游戏</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body class="site-body">
+    <div class="page-bg page-bg-game"></div>
+
+    <header class="site-header">
+      <div class="brand-block">
+        <a class="brand-mark" href="./index.html">鱼化湖回声</a>
+        <p class="brand-sub">游戏页</p>
+      </div>
+      <nav class="site-nav">
+        <a class="nav-link active" href="./index.html">游戏</a>
+        <a class="nav-link" href="./archive.html">档案</a>
+        <a class="nav-link" href="./public.html">公开资料</a>
+      </nav>
+    </header>
+
+    <main class="shell">
+      <section class="page-hero panel">
+        <div>
+          <p class="eyebrow">Task Based Investigation</p>
+          <h1>对话调查控制台</h1>
+          <p class="hero-text">
+            任务按章节推进。左侧看流程，中间读现场对话，右侧执行调查动作。
+            不需要输入文字，只通过点击调查、追问与提交结论完成整起异闻调查。
+          </p>
+          <p class="hero-warning">
+            故事完全虚构；游戏里借用的校园文化景观与公开信息，只作为悬疑叙事灵感。
+          </p>
+        </div>
+        <div class="hero-actions">
+          <button id="start-game" class="primary-btn">开始调查</button>
+          <a class="ghost-btn" href="./archive.html">打开档案页</a>
+          <a class="ghost-btn" href="./public.html">打开公开资料页</a>
+        </div>
+      </section>
+
+      <section class="game-layout case-panel">
+        <aside class="mission-rail panel">
+          <div class="section-head compact">
+            <div>
+              <p class="eyebrow">Chapters</p>
+              <h2>任务轨道</h2>
+            </div>
+          </div>
+          <div id="progress-track" class="rail-track"></div>
+          <div class="rail-foot">
+            <p id="progress-count" class="progress-count">0 / 7 项任务已完成</p>
+            <p class="muted-copy">每个结论都需要先完成对应调查动作。</p>
+          </div>
+        </aside>
+
+        <section class="console-panel panel">
+          <div class="section-head compact">
+            <div>
+              <p id="puzzle-index" class="eyebrow">第 1 章</p>
+              <h2 id="puzzle-title">载入案件中...</h2>
+            </div>
+            <span id="puzzle-tag" class="status-pill">任务</span>
+          </div>
+
+          <div id="dialogue-feed" class="dialogue-feed dialogue-feed-large"></div>
+
+          <article id="final-panel" class="final-panel hidden">
+            <p class="eyebrow">Case Closed</p>
+            <h2>结案报告</h2>
+            <p>
+              你顺利找到了伪装链条里的关键人物，也识破了那套借校园历史与夜色回声制造出来的障眼法。
+              裁判证被成功追回，周期赛得以按时开始，鱼化湖边的广播杂音却依旧没有完全消失。
+            </p>
+            <div class="final-answer">
+              <span>最终通关语</span>
+              <strong>仰信笃志 + 工牌 + 红色拉链马甲</strong>
+            </div>
+            <button id="restart-btn" class="ghost-btn" type="button">重新游玩</button>
+          </article>
+        </section>
+
+        <aside class="intel-panel panel">
+          <article class="mission-box">
+            <div class="mission-head">
+              <div>
+                <p class="eyebrow">Current Mission</p>
+                <h3 id="mission-title">当前任务</h3>
+              </div>
+              <span id="mission-status" class="mission-status">调查中</span>
+            </div>
+            <p id="mission-objective" class="mission-objective"></p>
+          </article>
+
+          <article class="mission-box">
+            <p class="eyebrow">Clues</p>
+            <h3>已发现线索</h3>
+            <div id="clue-badges" class="clue-badges"></div>
+          </article>
+
+          <article class="mission-box">
+            <p class="eyebrow">Actions</p>
+            <h3>可执行动作</h3>
+            <div id="choice-list" class="choice-list choice-list-column"></div>
+          </article>
+
+          <article class="mission-box">
+            <p class="eyebrow">Quick Route</p>
+            <h3>辅助页面</h3>
+            <div class="shortcut-list">
+              <a class="shortcut-link" href="./archive.html">去人物档案页</a>
+              <a class="shortcut-link" href="./public.html">去公开资料页</a>
+            </div>
+          </article>
+        </aside>
+      </section>
+
+      <section class="bottom-grid">
+        <section class="panel board-panel">
+          <div class="section-head compact">
+            <div>
+              <p class="eyebrow">Evidence Board</p>
+              <h2>线索墙</h2>
+            </div>
+          </div>
+          <div id="evidence-list" class="evidence-list"></div>
+        </section>
+
+        <section class="panel board-panel">
+          <div class="section-head compact">
+            <div>
+              <p class="eyebrow">Case Log</p>
+              <h2>破案记录</h2>
+            </div>
+          </div>
+          <div id="log-list" class="log-list"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
